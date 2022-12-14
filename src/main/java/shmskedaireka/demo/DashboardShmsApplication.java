@@ -2,29 +2,34 @@ package shmskedaireka.demo;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
+
+import shmskedaireka.demo.Controller.UserController;
+
+import java.util.List;
 import java.util.concurrent.atomic.AtomicLong;
-@SpringBootApplication
+
+@SpringBootApplication(exclude = SecurityAutoConfiguration.class)
 @RestController
+@ComponentScan(basePackageClasses = UserController.class)
 public class DashboardShmsApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(DashboardShmsApplication.class, args);
 	}
 
-	private static final String template = "Hello, %s!";
-	private final AtomicLong counter = new AtomicLong();
-
-	@GetMapping("/hello")
-	public String hello(@RequestParam(value = "name", defaultValue = "World") String name) {
-		return String.format("Hello %s!", name);
-	}
-
-	@GetMapping("/greeting")
-	public Greeting greeting(@RequestParam(value = "name", defaultValue = "World") String name) {
-		return new Greeting(counter.incrementAndGet(), String.format(template, name));
+	@GetMapping("/login")
+	public String Login() {
+		return "hello";
 	}
 
 }
