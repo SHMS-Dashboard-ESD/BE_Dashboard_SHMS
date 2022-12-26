@@ -14,7 +14,7 @@ import shmskedaireka.demo.Repository.KeluhanRepository;
 
 @RestController
 @RequestMapping("/keluhan")
-@CrossOrigin(origins = "http://localhost:8081/")
+@CrossOrigin(origins = "http://129.150.33.190:8081/")
 public class KeluhanController {
     @Autowired
     KeluhanRepository keluhanRepository;
