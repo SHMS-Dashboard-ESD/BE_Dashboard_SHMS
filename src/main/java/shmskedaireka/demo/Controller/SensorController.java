@@ -20,7 +20,7 @@ import shmskedaireka.demo.Repository.SensorsRepository;
 
 @RestController
 @RequestMapping("/sensor")
-@CrossOrigin(origins = "http://129.150.33.190:8081/")
+@CrossOrigin(origins = "*")
 public class SensorController {
     @Autowired
     SensorRepository sensorRepository;

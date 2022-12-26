@@ -19,7 +19,7 @@ import shmskedaireka.demo.Repository.UserRepository;
 
 @RestController
 @RequestMapping("/admin")
-@CrossOrigin(origins = "http://129.150.33.190:8081/")
+@CrossOrigin(origins = "*")
 public class AdminController {
     @Autowired
     UserRepository userRepository;
