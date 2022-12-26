@@ -25,7 +25,7 @@ import shmskedaireka.demo.Repository.BridgeRepository;
 import shmskedaireka.demo.Repository.UserRepository;
 
 @RestController
-@CrossOrigin(origins = "http://localhost:8080/")
+@CrossOrigin(origins = "http://localhost:8081/")
 @RequestMapping("/adminCustomer")
 public class AdminCustomer {
     @Autowired

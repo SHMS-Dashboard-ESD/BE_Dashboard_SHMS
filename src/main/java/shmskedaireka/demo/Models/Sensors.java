@@ -2,6 +2,9 @@ package shmskedaireka.demo.Models;
 
 import javax.persistence.Embeddable;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
+@JsonIgnoreProperties
 public class Sensors {
     private String amplitudos;
     private String displacement;

@@ -22,7 +22,7 @@ import shmskedaireka.demo.Repository.BridgeRepository;
 
 @RestController
 @RequestMapping("/bridge")
-@CrossOrigin(origins = "http://localhost:8080/")
+@CrossOrigin(origins = "http://localhost:8081/")
 public class BridgeController {
     @Autowired
     BridgeRepository bridgeRepository;

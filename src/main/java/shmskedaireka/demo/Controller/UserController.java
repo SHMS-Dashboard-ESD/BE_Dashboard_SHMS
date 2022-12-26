@@ -21,7 +21,7 @@ import shmskedaireka.demo.Repository.UserRepository;
 import shmskedaireka.demo.Models.User;
 
 @RestController
-@CrossOrigin(origins = "http://localhost:8080/")
+@CrossOrigin(origins = "http://localhost:8081/")
 @RequestMapping("/api")
 public class UserController {
 

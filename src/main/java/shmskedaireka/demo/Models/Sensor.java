@@ -12,10 +12,12 @@ import org.hibernate.annotations.TypeDef;
 import org.springframework.security.core.Transient;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.databind.JsonNode;
 
 @Entity
 @Table(name = "SENSOR")
+@JsonIgnoreProperties
 public class Sensor implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)

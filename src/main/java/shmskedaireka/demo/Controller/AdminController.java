@@ -19,7 +19,7 @@ import shmskedaireka.demo.Repository.UserRepository;
 
 @RestController
 @RequestMapping("/admin")
-@CrossOrigin(origins = "http://localhost:8080/")
+@CrossOrigin(origins = "http://localhost:8081/")
 public class AdminController {
     @Autowired
     UserRepository userRepository;
